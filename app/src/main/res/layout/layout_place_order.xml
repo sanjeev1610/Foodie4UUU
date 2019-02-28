@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+        <!--<com.rengwuxian.materialedittext.MaterialEditText-->
+            <!--android:id="@+id/edit_address_place_order"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Address"-->
+            <!--android:inputType="textMultiLine"-->
+            <!--android:text=""-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textColorHint="@android:color/black"-->
+            <!--android:textSize="18sp"-->
+            <!--app:met_baseColor="@android:color/black"-->
+            <!--app:met_floatingLabel="highlight"-->
+            <!--app:met_maxCharacters="25"-->
+            <!--app:met_primaryColor="@android:color/black"-->
+            <!--app:met_singleLineEllipsis="true" />-->
+        <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_comment_placeO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comment"
+            android:inputType="textMultiLine"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="25"
+            app:met_primaryColor="@android:color/black"
+            app:met_singleLineEllipsis="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELIVERY METHOD"
+            android:textColor="@color/fbutton_color_green_sea"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_setShipAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ship to this Address"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb_setHomeAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ship to Home Address"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="PAYMENT METHOD"-->
+            <!--android:textColor="@color/fbutton_color_green_sea"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioGroup-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb_cash_on"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Cash On Delivery"-->
+                <!--android:textSize="18sp" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb_instamojo"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Instamojo pay"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb_paypal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Paypal"-->
+                <!--android:textStyle="bold"-->
+                <!--android:visibility="gone"-->
+                <!--android:alpha="0"/>-->
+        <!--</RadioGroup>-->
+    </LinearLayout>
+    </ScrollView>
+
+</android.support.v7.widget.CardView>

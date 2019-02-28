@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.sanit.pc.foodie4u">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity
+                android:name=".Home"
+                android:label="@string/title_activity_home"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Main2Activity"/>
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/client_place"/>
+        <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_id"/>
+        <meta-data
+                android:name="com.facebook.accountkit.ApplicationName"
+                android:value="@string/app_name"/>
+        <meta-data
+                android:name="com.facebook.accountkit.ClientToken"
+                android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN"/>
+
+        <activity android:name="com.facebook.accountkit.ui.AccountKitActivity"/>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignupActivity"/>
+        <activity android:name=".FoodList"/>
+        <activity android:name=".FoodDetail"/>
+        <activity android:name=".Cart"/>
+        <activity android:name=".OrderStatus"/> <!-- <service android:name=".ListeningOrder"/> -->
+        <service android:name=".Services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <provider
+                android:name="com.facebook.FacebookContentProvider"
+                android:authorities="com.facebook.app.FacebookContentProvider215076266113642"
+                android:exported="true"/>
+
+        <activity android:name=".ShowComments"/>
+    </application>
+
+</manifest>

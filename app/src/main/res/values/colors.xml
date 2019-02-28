@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    //button color
+    <color name="btnSignup">#39796b</color>
+    <color name="btnSignActive">#A9d440</color>
+
+//navigation color
+    <color name="overlayBackground">#7f333639</color>
+    <color name="overlayActionBar">#0e0d0e</color>
+
+
+    <color name="fbutton_color_orange">#f39c12</color>
+    <color name="fbutton_color_green_sea">#16a085</color>
+
+    <color name="bgRowBackground">#FA3158</color>
+
+
+
+</resources>

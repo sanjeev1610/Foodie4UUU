@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/comment_refresh"
+        android:layout_height="match_parent"
+        android:background="@drawable/food"
+        android:orientation="vertical"
+        tools:context=".ShowComments">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView
+                android:id="@+id/title_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comments::"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="16dp"/>
+        <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="5dp"
+                android:padding="16dp"
+                android:layout_below="@id/title_comment"
+                android:id="@+id/show_cmnt_recview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>
